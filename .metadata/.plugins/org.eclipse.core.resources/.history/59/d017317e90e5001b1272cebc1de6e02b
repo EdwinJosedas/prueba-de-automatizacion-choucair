@@ -1,0 +1,16 @@
+package com.chou.test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PaginaTestear {
+
+	private WebDriver driver;
+	
+	public void setUp(){
+		System.setProperty("webdriver.chrome.driver","./src/test/resourses/ChomeDriver/chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.choucairtesting.com/empleos-testing/");
+	}
+}

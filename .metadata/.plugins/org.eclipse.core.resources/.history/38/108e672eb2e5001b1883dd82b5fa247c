@@ -1,0 +1,27 @@
+package com.chou.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PaginaTestear {
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\fabia\\OneDrive - ucentral.edu.co\\Documentos\\javavirtual\\eclipseNeon\\WORKSPACESELENIUM\\chromedriver_win32\\chromedriver.exe");
+		WebDriver  driver;
+		driver =new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.choucairtesting.com/");
+	
+		Thread.sleep(5);
+		driver.findElement(By.id("menu-item-550")).click();
+		Thread.sleep(5);
+		driver.findElement(By.cssSelector("elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4faf73e")).click();
+		Thread.sleep(10000);
+		//driver.findElement(By.name("empleosazulMesa de trabajo 1")).click();
+		//Thread.sleep(100000);
+		driver.close();
+		
+	}
+
+}

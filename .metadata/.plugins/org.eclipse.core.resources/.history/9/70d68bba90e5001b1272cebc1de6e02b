@@ -1,0 +1,5 @@
+package com.chou.test;
+
+public @interface before {
+
+}
